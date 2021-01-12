@@ -14,9 +14,13 @@ const App = () => {
     <>
       <Router>
         <NavBar sidebarToggle={() => setSidebarStatus(!sidebarStatus)} />
-        {console.log(sidebarStatus)}
-        {sidebarStatus ? <Shadow click={() => setSidebarStatus(false)}/> : null}
-        <Sidebar show={sidebarStatus} />
+        {sidebarStatus ? (
+          <Shadow click={() => setSidebarStatus(false)} />
+        ) : null}
+        <Sidebar
+          show={sidebarStatus}
+          sidebarToggle={() => setSidebarStatus(!sidebarStatus)}
+        />
         <Home />
       </Router>
     </>
