@@ -3,6 +3,7 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 import BurgerButton from "./../buttons/burger-button.js";
 import * as GiIcons from "react-icons/gi";
+import * as FaIcons from "react-icons/fa";
 
 const NavBar = (props) => {
   return (
@@ -28,6 +29,12 @@ const NavBar = (props) => {
               <Link to="/">Users</Link>
             </li>
           </ul>
+        </div>
+        <div className="cart">
+          <Link to="/">
+            <FaIcons.FaShoppingCart />
+            <span className='cart-number'>5</span>
+          </Link>
         </div>
       </nav>
     </div>
