@@ -32,6 +32,22 @@ export default class EkoStoreService {
       price: 30,
       imageUrl: "./tomat-small.png",
     },
+    {
+      id: 1,
+      title: "Grape-Apple",
+      brand: "Juices of Ukraine",
+      capacity: "1L",
+      price: 25,
+      imageUrl: "./grape-apple-small.png",
+    },
+    {
+      id: 2,
+      title: "Tomato",
+      brand: "Ranok",
+      capacity: "1L",
+      price: 30,
+      imageUrl: "./tomat-small.png",
+    },
   ];
 
   //! ----Backend server delay emulator-------

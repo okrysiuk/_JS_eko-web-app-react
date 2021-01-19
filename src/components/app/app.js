@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./app.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./../../pages/home";
 import Sidebar from "./../sidebar";
 import NavBar from "./../navbar";

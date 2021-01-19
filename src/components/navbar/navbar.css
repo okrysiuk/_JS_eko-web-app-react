@@ -73,12 +73,12 @@
   cursor: pointer;
   height: 100%;
   position: relative;
-  top: -2px;
+  top: 2px;
 }
 
 .cart {
   position: relative;
-  top: -3px;
+  top: 3px;
   display: flex;
 }
 
@@ -93,7 +93,7 @@
   color: #fff;
   border-radius: 50%;
   position: absolute;
-  top: 0.25rem;
+  top: -0.25rem;
   left: 1rem;
 }
 

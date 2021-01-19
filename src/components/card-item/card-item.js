@@ -10,9 +10,7 @@ const CardItem = ({ card }) => {
         <img src={imageUrl} alt="Card item" />
       </div>
       <div className="card-inner-container">
-        <h4>
-          <p>{title}</p>
-        </h4>
+        <h4>{title}</h4>
         <span>Capacity: {capacity}</span>
         <p>Brand: "{brand}"</p>
         <WhiteButton
