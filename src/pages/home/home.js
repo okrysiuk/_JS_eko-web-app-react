@@ -1,11 +1,11 @@
 import React from "react";
-
+import LandingSection from "./../../components/landing-section";
+import CardList from "./../../components/card-list";
 const Home = () => {
   return (
     <>
-      <div className="container" style={{ marginTop: "64px" }}>
-        <p>This is content</p>
-      </div>
+      <LandingSection />
+        <CardList />
     </>
   );
 };

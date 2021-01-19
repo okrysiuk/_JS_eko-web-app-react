@@ -31,7 +31,7 @@ const NavBar = (props) => {
           </ul>
         </div>
         <div className="cart">
-          <Link to="/">
+          <Link to="/cart">
             <FaIcons.FaShoppingCart />
             <span className='cart-number'>5</span>
           </Link>

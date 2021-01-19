@@ -6,9 +6,14 @@
   /*background-color: #01baef;
   background-image: linear-gradient(315deg, #01baef 0%, #20bf55 74%);
   background-color: #63d471;
-  background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);*/
+  background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
   background-color: #0d6efd;
   background-image: linear-gradient(315deg, #0d6efd 0%, #198754 64%);
+  background-color: #3bb78f;
+  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);*/
+  background-color: #166d3b;
+  background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+
   height: 56px;
 }
 .toolbar-navigation {
@@ -31,11 +36,6 @@
 .toolbar-items a {
   color: #fff;
   text-decoration: none;
-}
-
-.toolbar-items a:hover,
-.toolbar-items a:active {
-  color: #fa923f;
 }
 
 .toolbar-items ul {
@@ -63,7 +63,8 @@
 
 .toolbar-items a:hover,
 .toolbar-items a:active {
-  color: #fa923f;
+  /*color: #fa923f;*/
+  color: #212529;
 }
 
 .apple-button {
