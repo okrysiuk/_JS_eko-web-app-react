@@ -1,10 +1,13 @@
 import React from "react";
+import ShoppingCartTable from "../../components/shopping-cart-table";
 
 const Cart = () => {
   return (
-    <div className="container" style={{ marginTop: "64px" }}>
-      <p>Cart page</p>
-    </div>
+    <>
+      <div style={{ marginTop: "56px" }}>
+        <ShoppingCartTable />
+      </div>
+    </>
   );
 };
 

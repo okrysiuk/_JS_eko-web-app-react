@@ -2,7 +2,7 @@ import React from "react";
 //import "./card-item.css";
 import WhiteButton from "./../buttons/white-button";
 
-const CardItem = ({ card }) => {
+const CardItem = ({ card, onAddedToCart }) => {
   const { imageUrl, title, brand, capacity } = card;
   return (
     <>
@@ -14,6 +14,7 @@ const CardItem = ({ card }) => {
         <span>Capacity: {capacity}</span>
         <p>Brand: "{brand}"</p>
         <WhiteButton
+          onClick={onAddedToCart}
           className="btns"
           buttonStyle="btn--outline-variant-item"
           buttonSize="btn--medium-variant-item"
