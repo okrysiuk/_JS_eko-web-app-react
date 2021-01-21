@@ -4,19 +4,22 @@ import { Link } from "react-router-dom";
 import BurgerButton from "./../buttons/burger-button.js";
 import * as GiIcons from "react-icons/gi";
 import * as FaIcons from "react-icons/fa";
+import { connect } from "react-redux";
 
-const NavBar = (props) => {
+
+
+const NavBar = ({ sidebarToggle, cartItemsNumber }) => {
   return (
     <div className="toolbar">
       <nav className="toolbar-navigation">
         <div className="toolbar-burger-button">
-          <BurgerButton click={props.sidebarToggle} />
+          <BurgerButton click={sidebarToggle} />
         </div>
         <div className="spacer-before-logo" />
         <div className="toolbar-logo">
           <Link to="/">
             <GiIcons.GiShinyApple className="apple-button" />
-            LOGOTYPE
+            ECOSPHERE
           </Link>
         </div>
         <div className="spacer-after-logo" />
@@ -33,7 +36,7 @@ const NavBar = (props) => {
         <div className="cart">
           <Link to="/cart">
             <FaIcons.FaShoppingCart />
-            <span className='cart-number'>5</span>
+            { cartItemsNumber === 0 ? null : <span className="cart-number">{cartItemsNumber}</span> }
           </Link>
         </div>
       </nav>
@@ -41,4 +44,10 @@ const NavBar = (props) => {
   );
 };
 
-export default NavBar;
+const mapStateToProps = ({ cartItems }) => {
+  return {
+    cartItemsNumber: cartItems.length,
+  };
+};
+
+export default connect(mapStateToProps)(NavBar);

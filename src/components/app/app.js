@@ -12,7 +12,7 @@ const App = () => {
   const [sidebarStatus, setSidebarStatus] = useState(false);
 
   return (
-    <>
+    <div>
       <NavBar sidebarToggle={() => setSidebarStatus(!sidebarStatus)} />
       {sidebarStatus ? <Shadow click={() => setSidebarStatus(false)} /> : null}
       <Sidebar
@@ -27,7 +27,7 @@ const App = () => {
           <Cart />
         </Route>
       </Switch>
-    </>
+    </div>
   );
 };
 

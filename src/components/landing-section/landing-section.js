@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function LandingSection() {
   return (
     <div className="landing-container">
-      <h1>Feel the soul of your<br></br>native land</h1>
+      <h1>Be yourself<br></br>Other roles are already occupied</h1>
       <div className="landing-btns">
         <Link to="/products" className="btn-mobile">
           <WhiteButton
