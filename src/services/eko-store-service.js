@@ -17,7 +17,7 @@ export default class EkoStoreService {
       imageUrl: "./tomat-small.png",
     },
     {
-      id: 1,
+      id: 3,
       title: "Grape-Apple",
       brand: "Juices of Ukraine",
       capacity: "1L",
@@ -25,7 +25,7 @@ export default class EkoStoreService {
       imageUrl: "./grape-apple-small.png",
     },
     {
-      id: 2,
+      id: 4,
       title: "Tomato",
       brand: "Ranok",
       capacity: "1L",
@@ -33,7 +33,7 @@ export default class EkoStoreService {
       imageUrl: "./tomat-small.png",
     },
     {
-      id: 1,
+      id: 5,
       title: "Grape-Apple",
       brand: "Juices of Ukraine",
       capacity: "1L",
@@ -41,7 +41,7 @@ export default class EkoStoreService {
       imageUrl: "./grape-apple-small.png",
     },
     {
-      id: 2,
+      id: 6,
       title: "Tomato",
       brand: "Ranok",
       capacity: "1L",
