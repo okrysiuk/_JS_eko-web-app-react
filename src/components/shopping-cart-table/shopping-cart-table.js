@@ -3,17 +3,22 @@ import { connect } from "react-redux";
 import * as FaIcons from "react-icons/fa";
 import * as FiIcons from "react-icons/fi";
 import Button from "./../buttons/white-button";
+import Spinner from "./../spinner";
 import emailjs from "emailjs-com";
+import { Link } from "react-router-dom";
 
 import {
   productAddedToCart,
   productRemovedFromCart,
   allProductsRemovedFromCart,
+  clearCart,
+  orderSendingStatus,
 } from "../../actions.js";
 
 import "./shopping-cart-table.css";
 
-const sendEmail = (items) => {
+const sendEmail = (items, onClear, onSending) => {
+  onSending();
   const templateParams = {
     items: JSON.stringify(items),
   };
@@ -26,7 +31,12 @@ const sendEmail = (items) => {
     )
     .then(
       function (response) {
-        console.log("SUCCESS!", response.status, response.text);
+        console.log(
+          "SUCCESS! Order has been send.",
+          response.status,
+          response.text
+        );
+        onClear();
       },
       function (error) {
         console.log("FAILED...", error);
@@ -37,10 +47,43 @@ const sendEmail = (items) => {
 const ShoppingCartTable = ({
   items,
   total,
+  email,
+  sending,
   onIncrease,
   onDecrease,
   onDelete,
+  onClear,
+  onSending,
 }) => {
+  if (sending)
+    return (
+      <div className="spinner-container">
+        <Spinner />
+      </div>
+    );
+  if (total === 0 && !email)
+    return (
+      <div className="shopping-cart-empty">
+        <h2>YOUR CART IS EMTY</h2>
+      </div>
+    );
+  if (total === 0 && email)
+    return (
+      <div className="shopping-cart-empty">
+        <h2>YOUR ORDER HAS BEEN SEND ;)</h2>
+        <p>We will call you back soon...</p>
+        <Link to="/products">
+          <Button
+            className="btns"
+            buttonStyle="btn--outline-variant-item"
+            buttonSize="btn--medium-variant-item"
+          >
+            LET'S GO SHOPPING AGAIN !
+            <FaIcons.FaCartArrowDown />
+          </Button>
+        </Link>
+      </div>
+    );
   const renderRow = (item, idx) => {
     const { id, title, count, total } = item;
     return (
@@ -110,7 +153,7 @@ const ShoppingCartTable = ({
       <div className="total-price-container">
         <div className="spacer"></div>
         <Button
-          onClick={() => sendEmail(items)}
+          onClick={() => sendEmail(items, onClear, onSending)}
           className="btns"
           buttonStyle="btn--outline-variant-item"
           buttonSize="btn--medium-variant-item"
@@ -122,10 +165,17 @@ const ShoppingCartTable = ({
   );
 };
 
-const mapStateToProps = ({ cartItems, orderTotal }) => {
+const mapStateToProps = ({
+  cartItems,
+  orderTotal,
+  emailStatus,
+  orderSending,
+}) => {
   return {
     items: cartItems,
     total: orderTotal,
+    email: emailStatus,
+    sending: orderSending,
   };
 };
 
@@ -133,6 +183,8 @@ const mapDispatchToProps = {
   onIncrease: productAddedToCart,
   onDecrease: productRemovedFromCart,
   onDelete: allProductsRemovedFromCart,
+  onClear: clearCart,
+  onSending: orderSendingStatus,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCartTable);

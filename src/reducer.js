@@ -4,6 +4,8 @@ const initialState = {
   error: null,
   cartItems: [],
   orderTotal: 0,
+  emailStatus: false,
+  orderSending: false,
 };
 
 const updateCartItems = (cartItems, item, idx) => {
@@ -44,8 +46,9 @@ const updateOrder = (state, productId, quantity) => {
   );
   return {
     ...state,
+    emailStatus: false,
     cartItems: newCartItems,
-    orderTotal: newOrderTotal
+    orderTotal: newOrderTotal,
   };
 };
 
@@ -84,6 +87,21 @@ const reducer = (state = initialState, action) => {
     case "ALL_PRODUCTS_REMOVED_FROM_CART":
       const item = state.cartItems.find(({ id }) => id === action.payload);
       return updateOrder(state, action.payload, -item.count);
+
+    case "CLEAR_CART":
+      return {
+        ...state,
+        cartItems: action.payload,
+        orderTotal: 0,
+        emailStatus: true,
+        orderSending: false,
+      };
+
+    case "ORDER_SENDING_STATUS":
+      return {
+        ...state,
+        orderSending: true,
+      };
 
     default:
       return state;

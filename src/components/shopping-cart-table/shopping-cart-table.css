@@ -59,3 +59,19 @@
   flex-direction: row;
   justify-content: center;
 }
+.shopping-cart-empty {
+  display: flex;
+  height: 10rem;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #242424;
+  padding-top: 2rem;
+  text-align: center;
+}
+.shopping-cart {
+  padding-top: 2rem;
+}
+.spinner-container {
+  display: flex;
+  justify-content: center;
+}
