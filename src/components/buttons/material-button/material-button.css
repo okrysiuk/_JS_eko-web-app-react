@@ -1,4 +1,5 @@
 .btn-mat {
+  margin: 0 5px;
   border: 2px solid;
   border-radius: 4px;
   background-color: white;
@@ -20,7 +21,14 @@
   text-transform: uppercase;
 }
 
-/*Transparent*/
+/* White */
+.white {
+  border-color: #fff;
+  background-color: #fff;
+  color: #242424;
+}
+
+/* Transparent White*/
 .transparent-white {
   border-color: #fff;
   background-color: transparent;
