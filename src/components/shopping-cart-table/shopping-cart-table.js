@@ -13,14 +13,20 @@ import {
   allProductsRemovedFromCart,
   clearCart,
   orderSendingStatus,
+  firstNameChange,
+  lastNameChange,
+  phoneNumberChange,
 } from "../../actions.js";
 
 import "./shopping-cart-table.css";
 
-const sendEmail = (items, onClear, onSending) => {
+const sendEmail = (items, onClear, onSending, first, last, phone) => {
   onSending();
   const templateParams = {
     items: JSON.stringify(items),
+    first,
+    last,
+    phone,
   };
   emailjs
     .send(
@@ -54,6 +60,12 @@ const ShoppingCartTable = ({
   onDelete,
   onClear,
   onSending,
+  first,
+  last,
+  phone,
+  onFirst,
+  onLast,
+  onPhone,
 }) => {
   if (sending)
     return (
@@ -145,20 +157,31 @@ const ShoppingCartTable = ({
         </thead>
         <tbody>{items.map(renderRow)}</tbody>
       </table>
-
       <div className="total-price-container">
         <div className="spacer"></div>
         <h4>Total: ${total}</h4>
       </div>
+      <div className="contact-form">
+        <form>
+          <p>Firstname:</p>
+          <input type="text" onChange={(e) => onFirst(e)} />
+          <p>Lastname:</p>
+          <input type="text" onChange={(e) => onLast(e)} />
+          <p>Phone:</p>
+          <input type="text" onChange={(e) => onPhone(e)} />
+        </form>
+      </div>
       <div className="total-price-container">
         <div className="spacer"></div>
         <Button
-          onClick={() => sendEmail(items, onClear, onSending)}
+          onClick={() =>
+            sendEmail(items, onClear, onSending, first, last, phone)
+          }
           className="btns"
           buttonStyle="btn--outline-variant-item"
           buttonSize="btn--medium-variant-item"
         >
-          Send Order
+          Confirm Order
         </Button>
       </div>
     </div>
@@ -170,12 +193,18 @@ const mapStateToProps = ({
   orderTotal,
   emailStatus,
   orderSending,
+  firstName,
+  lastName,
+  phoneNumber,
 }) => {
   return {
     items: cartItems,
     total: orderTotal,
     email: emailStatus,
     sending: orderSending,
+    first: firstName,
+    last: lastName,
+    phone: phoneNumber,
   };
 };
 
@@ -185,6 +214,9 @@ const mapDispatchToProps = {
   onDelete: allProductsRemovedFromCart,
   onClear: clearCart,
   onSending: orderSendingStatus,
+  onFirst: firstNameChange,
+  onLast: lastNameChange,
+  onPhone: phoneNumberChange,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCartTable);

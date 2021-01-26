@@ -6,6 +6,9 @@ const initialState = {
   orderTotal: 0,
   emailStatus: false,
   orderSending: false,
+  firstName: null,
+  lastName: null,
+  phoneNumber: null,
 };
 
 const updateCartItems = (cartItems, item, idx) => {
@@ -95,12 +98,33 @@ const reducer = (state = initialState, action) => {
         orderTotal: 0,
         emailStatus: true,
         orderSending: false,
+        firstName: null,
+        lastName: null,
+        phoneNumber: null,
       };
 
     case "ORDER_SENDING_STATUS":
       return {
         ...state,
         orderSending: true,
+      };
+
+    case "FIRST_NAME_CHANGE":
+      return {
+        ...state,
+        firstName: action.payload,
+      };
+
+    case "LAST_NAME_CHANGE":
+      return {
+        ...state,
+        lastName: action.payload,
+      };
+
+    case "PHONE_NUMBER_CHANGE":
+      return {
+        ...state,
+        phoneNumber: action.payload,
       };
 
     default:
