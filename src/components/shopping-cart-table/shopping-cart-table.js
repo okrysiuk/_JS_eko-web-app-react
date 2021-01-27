@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import * as FaIcons from "react-icons/fa";
 import * as FiIcons from "react-icons/fi";
 import Button from "./../buttons/white-button";
+import MaterialButton from "./../buttons/material-button";
 import Spinner from "./../spinner";
 import emailjs from "emailjs-com";
 import { Link } from "react-router-dom";
@@ -107,32 +108,26 @@ const ShoppingCartTable = ({
         <td id="buttons">
           <div className="buttons-container">
             &#8195;
-            <Button
+            <MaterialButton
               onClick={() => onDelete(id)}
-              className="btns"
-              buttonStyle="btn--outline-variant-item"
-              buttonSize="btn--medium-variant-item"
+              myStyle="danger-outline medium"
             >
               <FaIcons.FaRegTrashAlt />
-            </Button>
+            </MaterialButton>
             &#8195;
-            <Button
+            <MaterialButton
               onClick={() => onDecrease(id)}
-              className="btns"
-              buttonStyle="btn--outline-variant-item"
-              buttonSize="btn--medium-variant-item"
+              myStyle="warning-outline medium"
             >
               <FiIcons.FiMinusCircle />
-            </Button>
+            </MaterialButton>
             &#8195;
-            <Button
+            <MaterialButton
               onClick={() => onIncrease(id)}
-              className="btns"
-              buttonStyle="btn--outline-variant-item"
-              buttonSize="btn--medium-variant-item"
+              myStyle="success-outline medium"
             >
               <FiIcons.FiPlusCircle />
-            </Button>
+            </MaterialButton>
             &#8195;
           </div>
         </td>

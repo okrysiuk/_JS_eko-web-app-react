@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./card-list.css";
+import * as FaIcons from "react-icons/fa";
 
 import CardItem from "./../card-item";
 
@@ -14,12 +15,16 @@ import { compose } from "./../../utils";
 import Spinner from "./../spinner";
 import ErrorNotification from "./../error-notification";
 
-const CardList = ({ cards, onAddedToCart }) => {
+const CardList = ({ cards, onAddedToCart, cartItems }) => {
+  const avoska = [];
+  cartItems.map((item) => avoska.push(item.id));
+  console.log(avoska);
   return (
     <div className="cards-container">
       {cards.map((card) => {
         return (
           <div key={card.id} className="card-item">
+            <div className="check-icon">{(avoska.indexOf(card.id) !== -1) ? <FaIcons.FaCheckCircle /> : null}</div>
             <CardItem
               card={card}
               onAddedToCart={() => onAddedToCart(card.id)}
@@ -36,7 +41,7 @@ class CardListContainer extends Component {
     this.props.fetchCards();
   }
   render() {
-    const { cards, loading, error, onAddedToCart } = this.props;
+    const { cards, loading, error, onAddedToCart, cartItems } = this.props;
 
     if (loading) {
       return <Spinner />;
@@ -46,11 +51,17 @@ class CardListContainer extends Component {
       return <ErrorNotification />;
     }
 
-    return <CardList cards={cards} onAddedToCart={onAddedToCart} />;
+    return (
+      <CardList
+        cards={cards}
+        onAddedToCart={onAddedToCart}
+        cartItems={cartItems}
+      />
+    );
   }
 }
-const mapStateToProps = ({ cards, loading, error }) => {
-  return { cards, loading, error };
+const mapStateToProps = ({ cards, loading, error, cartItems }) => {
+  return { cards, loading, error, cartItems };
 };
 
 const mapDispatchToProps = (dispatch, { ekoStoreService }) => {
@@ -64,3 +75,9 @@ export default compose(
   withEkoStoreService(),
   connect(mapStateToProps, mapDispatchToProps)
 )(CardListContainer);
+
+/*
+{cartItems.indexOf(card) !== -1 ? (
+                <FaIcons.FaCheckCircle />
+              ) : null}
+*/
