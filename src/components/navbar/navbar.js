@@ -6,8 +6,6 @@ import * as GiIcons from "react-icons/gi";
 import * as FaIcons from "react-icons/fa";
 import { connect } from "react-redux";
 
-
-
 const NavBar = ({ sidebarToggle, cartItemsNumber }) => {
   return (
     <div className="toolbar">
@@ -26,17 +24,43 @@ const NavBar = ({ sidebarToggle, cartItemsNumber }) => {
         <div className="toolbar-items">
           <ul>
             <li>
-              <Link to="/">Products</Link>
+              <Link to="/">
+                {/*<FaIcons.FaHome className="navbar-icon" />*/}
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/">Users</Link>
+              <Link to="/production">
+                {/*<GiIcons.GiFruitTree className="navbar-icon" />*/}
+                Production
+              </Link>
+            </li>
+            <li>
+              <Link to="/store">
+                {/*<FaIcons.FaStore className="navbar-icon" />*/}
+                Store
+              </Link>
+            </li>
+            <li>
+              <Link to="/vacancies">
+                {/*<GiIcons.GiDiploma className="navbar-icon" />*/}
+                Vacancies
+              </Link>
+            </li>
+            <li>
+              <Link to="/contacts">
+                {/*<FaIcons.FaPhoneSquare className="navbar-icon" />*/}
+                Contacts
+              </Link>
             </li>
           </ul>
         </div>
         <div className="cart">
           <Link to="/cart">
             <FaIcons.FaShoppingCart />
-            { cartItemsNumber === 0 ? null : <span className="cart-number">{cartItemsNumber}</span> }
+            {cartItemsNumber === 0 ? null : (
+              <span className="cart-number">{cartItemsNumber}</span>
+            )}
           </Link>
         </div>
       </nav>

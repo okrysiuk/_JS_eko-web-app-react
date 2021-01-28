@@ -19,12 +19,32 @@ const Sidebar = (props) => {
       <ul>
         <li>
           <Link to="/" onClick={props.sidebarToggle}>
-            Products
+            Home
           </Link>
         </li>
         <li>
-          <Link to="/" onClick={props.sidebarToggle}>
-            Users
+          <Link to="/production" onClick={props.sidebarToggle}>
+            Production
+          </Link>
+        </li>
+        <li>
+          <Link to="/store" onClick={props.sidebarToggle}>
+            Store
+          </Link>
+        </li>
+        <li>
+          <Link to="/vacancies" onClick={props.sidebarToggle}>
+            Vacancies
+          </Link>
+        </li>
+        <li>
+          <Link to="/contacts" onClick={props.sidebarToggle}>
+            Contacts
+          </Link>
+        </li>
+        <li>
+          <Link to="/cart" onClick={props.sidebarToggle}>
+            Shopping cart
           </Link>
         </li>
       </ul>
