@@ -24,11 +24,12 @@ const updateCartItems = (cartItems, item, idx) => {
 };
 
 const updateCartItem = (card, item = {}, quantity) => {
-  const { id = card.id, count = 0, title = card.title, total = 0 } = item;
+  const { id = card.id, count = 0, title = card.title, brand = card.brand, total = 0 } = item;
 
   return {
     id,
     title,
+    brand,
     count: count + quantity,
     total: total + quantity * card.price,
   };

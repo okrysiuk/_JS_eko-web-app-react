@@ -94,11 +94,12 @@ const ShoppingCartTable = ({
       </div>
     );
   const renderRow = (item, idx) => {
-    const { id, title, count, total } = item;
+    const { id, title, brand, count, total } = item;
     return (
       <tr key={id}>
         <td>{idx + 1}</td>
         <td>{title}</td>
+        <td>{brand}</td>
         <td>{count}</td>
         <td>${total}</td>
         <td id="buttons">
@@ -141,6 +142,7 @@ const ShoppingCartTable = ({
           <tr>
             <th>#</th>
             <th>Item</th>
+            <th>Brand</th>
             <th>Count</th>
             <th>Price</th>
             <th>Action</th>
