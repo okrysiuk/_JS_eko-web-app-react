@@ -52,6 +52,27 @@ export const orderSendingStatus = () => {
   };
 };
 
+export const firstNameChange = (e) => {
+  return {
+    type: "FIRST_NAME_CHANGE",
+    payload: e.target.value,
+  };
+};
+
+export const lastNameChange = (e) => {
+  return {
+    type: "LAST_NAME_CHANGE",
+    payload: e.target.value,
+  };
+};
+
+export const phoneNumberChange = (e) => {
+  return {
+    type: "PHONE_NUMBER_CHANGE",
+    payload: e.target.value,
+  };
+};
+
 const fetchCards = (bookstoreService, dispatch) => () => {
   dispatch(cardsRequested());
   bookstoreService

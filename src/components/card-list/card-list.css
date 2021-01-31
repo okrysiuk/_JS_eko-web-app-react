@@ -8,6 +8,7 @@
 }
 
 .card-item {
+  position: relative;
   margin: 15px;
   display: flex;
   flex-direction: column;
@@ -27,6 +28,10 @@
   align-items: center;
   padding: 10px 10px;
 }
+
+.card-inner-container p {
+  margin-bottom: 10px;
+}
 .img-container {
   height: 200px;
   overflow: hidden;
@@ -34,6 +39,14 @@
 
 .card-item img {
   height: 100%;
+}
+
+.check-icon {
+  font-size: 2rem;
+  color: green;
+  position: absolute;
+  top: 5%;
+  left: 85%;
 }
 
 h4 {

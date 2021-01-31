@@ -3,7 +3,9 @@ import { connect } from "react-redux";
 import * as FaIcons from "react-icons/fa";
 import * as FiIcons from "react-icons/fi";
 import Button from "./../buttons/white-button";
+import MaterialButton from "./../buttons/material-button";
 import Spinner from "./../spinner";
+import ShoppingCartEmpty from "./../shopping-cart-empty";
 import emailjs from "emailjs-com";
 import { Link } from "react-router-dom";
 
@@ -13,14 +15,20 @@ import {
   allProductsRemovedFromCart,
   clearCart,
   orderSendingStatus,
+  firstNameChange,
+  lastNameChange,
+  phoneNumberChange,
 } from "../../actions.js";
 
 import "./shopping-cart-table.css";
 
-const sendEmail = (items, onClear, onSending) => {
+const sendEmail = (items, onClear, onSending, first, last, phone) => {
   onSending();
   const templateParams = {
     items: JSON.stringify(items),
+    first,
+    last,
+    phone,
   };
   emailjs
     .send(
@@ -54,6 +62,12 @@ const ShoppingCartTable = ({
   onDelete,
   onClear,
   onSending,
+  first,
+  last,
+  phone,
+  onFirst,
+  onLast,
+  onPhone,
 }) => {
   if (sending)
     return (
@@ -61,12 +75,7 @@ const ShoppingCartTable = ({
         <Spinner />
       </div>
     );
-  if (total === 0 && !email)
-    return (
-      <div className="shopping-cart-empty">
-        <h2>YOUR CART IS EMTY</h2>
-      </div>
-    );
+  if (total === 0 && !email) return <ShoppingCartEmpty />;
   if (total === 0 && email)
     return (
       <div className="shopping-cart-empty">
@@ -95,32 +104,26 @@ const ShoppingCartTable = ({
         <td id="buttons">
           <div className="buttons-container">
             &#8195;
-            <Button
+            <MaterialButton
               onClick={() => onDelete(id)}
-              className="btns"
-              buttonStyle="btn--outline-variant-item"
-              buttonSize="btn--medium-variant-item"
+              myStyle="danger-outline medium"
             >
               <FaIcons.FaRegTrashAlt />
-            </Button>
+            </MaterialButton>
             &#8195;
-            <Button
+            <MaterialButton
               onClick={() => onDecrease(id)}
-              className="btns"
-              buttonStyle="btn--outline-variant-item"
-              buttonSize="btn--medium-variant-item"
+              myStyle="warning-outline medium"
             >
               <FiIcons.FiMinusCircle />
-            </Button>
+            </MaterialButton>
             &#8195;
-            <Button
+            <MaterialButton
               onClick={() => onIncrease(id)}
-              className="btns"
-              buttonStyle="btn--outline-variant-item"
-              buttonSize="btn--medium-variant-item"
+              myStyle="success-outline medium"
             >
               <FiIcons.FiPlusCircle />
-            </Button>
+            </MaterialButton>
             &#8195;
           </div>
         </td>
@@ -145,21 +148,32 @@ const ShoppingCartTable = ({
         </thead>
         <tbody>{items.map(renderRow)}</tbody>
       </table>
-
       <div className="total-price-container">
         <div className="spacer"></div>
         <h4>Total: ${total}</h4>
       </div>
-      <div className="total-price-container">
-        <div className="spacer"></div>
-        <Button
-          onClick={() => sendEmail(items, onClear, onSending)}
-          className="btns"
-          buttonStyle="btn--outline-variant-item"
-          buttonSize="btn--medium-variant-item"
-        >
-          Send Order
-        </Button>
+      <div className="contact-form">
+        <form>
+          <p>Firstname:</p>
+          <input type="text" onChange={(e) => onFirst(e)} />
+          <p>Lastname:</p>
+          <input type="text" onChange={(e) => onLast(e)} />
+          <p>Phone:</p>
+          <input type="text" onChange={(e) => onPhone(e)} />
+        </form>
+      </div>
+      <div className="confirm-order-container">
+        {/*<div className="spacer"></div>*/}
+        <div className="confirm-order-btn">
+          <MaterialButton
+            onClick={() =>
+              sendEmail(items, onClear, onSending, first, last, phone)
+            }
+            myStyle="success-fill large"
+          >
+            Confirm Order
+          </MaterialButton>
+        </div>
       </div>
     </div>
   );
@@ -170,12 +184,18 @@ const mapStateToProps = ({
   orderTotal,
   emailStatus,
   orderSending,
+  firstName,
+  lastName,
+  phoneNumber,
 }) => {
   return {
     items: cartItems,
     total: orderTotal,
     email: emailStatus,
     sending: orderSending,
+    first: firstName,
+    last: lastName,
+    phone: phoneNumber,
   };
 };
 
@@ -185,6 +205,9 @@ const mapDispatchToProps = {
   onDelete: allProductsRemovedFromCart,
   onClear: clearCart,
   onSending: orderSendingStatus,
+  onFirst: firstNameChange,
+  onLast: lastNameChange,
+  onPhone: phoneNumberChange,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCartTable);

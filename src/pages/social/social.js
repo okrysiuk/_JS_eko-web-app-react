@@ -1,0 +1,29 @@
+import React from "react";
+import styled from "styled-components";
+
+const Social = () => {
+  const SocialWrapper = styled.div`
+    height: 80vh;
+    text-align: center;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  `;
+  const HireSomeone = styled.h2`
+    color: red;
+  `;
+
+  return (
+    <SocialWrapper>
+      <h1>Link to social networks will be alive after creating accounts...</h1>
+      <HireSomeone>
+        We need to hire someone who will create, update and promote our company
+        on social networks
+      </HireSomeone>
+    </SocialWrapper>
+  );
+};
+
+export default Social;

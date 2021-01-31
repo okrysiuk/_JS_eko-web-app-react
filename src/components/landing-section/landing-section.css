@@ -13,19 +13,19 @@
 }
 
 .landing-container > h1 {
-  font-family: 'Indie Flower', cursive;
+  /*font-family: "Indie Flower", cursive;*/
+  text-transform: uppercase;
   color: #fff;
-  /*text-transform: uppercase;*/
-  font-size: 80px;
+  font-size: 90px;
   margin-top: -100px;
 }
-
+/*
+.btn-mat {
+  margin: 0 5px;
+}
+*/
 .landing-btns {
   margin-top: 32px;
-}
-
-.landing-btns .btn {
-  margin: 6px;
 }
 
 @media screen and (max-width: 960px) {
@@ -40,7 +40,7 @@
     font-size: 50px;
     margin-top: -75px;
   }
-
+  /*
   .btn-mobile {
     display: block;
     text-decoration: none;
@@ -48,5 +48,5 @@
 
   .btn {
     width: 100%;
-  }
+  }*/
 }

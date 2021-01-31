@@ -1,0 +1,180 @@
+.btn-mat {
+  margin: 0 5px;
+  border: 2px solid;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  /*  padding: 10px 24px;
+  font-size: 18px;*/
+  cursor: pointer;
+}
+.medium {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+}
+.large {
+  padding: 0.8rem 2.2rem;
+  font-size: 1.25rem;
+}
+
+.up {
+  text-transform: uppercase;
+}
+
+/* White */
+.white {
+  border-color: #fff;
+  background-color: #fff;
+  color: #242424;
+}
+
+/* Transparent White*/
+.transparent-white {
+  border-color: #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
+.transparent-white:hover {
+  background-color: #fff;
+  color: #242424;
+  transition: all 0.2s ease-out;
+}
+
+/*Black*/
+.dark-outline {
+  border-color: #242424;
+  background-color: #fff;
+  color: #242424;
+}
+
+.dark-outline:hover {
+  background-color: #242424;
+  color: white;
+  transition: all 0.2s ease-out;
+}
+
+.dark-fill {
+  border-color: #242424;
+  background-color: #242424;
+  color: #fff;
+}
+
+.dark-fill:hover {
+  border-color: #474747;
+  background-color: #474747;
+}
+
+/* Green */
+.success-outline {
+  border-color: #4caf50;
+  color: green;
+}
+
+.success-outline:hover {
+  background-color: #4caf50;
+  color: white;
+  transition: all 0.2s ease-out;
+}
+
+.success-fill {
+  border-color: #4caf50;
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.success-fill:hover {
+  border-color: #61bd64;
+  background-color: #61bd64;
+}
+
+/* Blue */
+.info-outline {
+  border-color: #2196f3;
+  color: dodgerblue;
+}
+
+.info-outline:hover {
+  background: #2196f3;
+  color: white;
+  transition: all 0.2s ease-out;
+}
+
+.info-fill {
+  border-color: #2196f3;
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.info-fill:hover {
+  background-color: #51a5e9;
+  border-color: #51a5e9;
+}
+
+/* Orange */
+.warning-outline {
+  border-color: #ff9800;
+  color: orange;
+}
+
+.warning-outline:hover {
+  background-color: #ff9800;
+  color: #fff;
+  transition: all 0.2s ease-out;
+}
+
+.warning-fill {
+  border-color: #ff9800;
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.warning-fill:hover {
+  background-color: #ffa927;
+  border-color: #ffa927;
+}
+
+/* Red */
+.danger-outline {
+  border-color: #f44336;
+  color: red;
+}
+
+.danger-outline:hover {
+  background: #f44336;
+  color: white;
+  transition: all 0.2s ease-out;
+}
+
+.danger-fill {
+  border-color: #f44336;
+  background-color: #f44336;
+  color: #fff;
+}
+
+.danger-fill:hover {
+  background-color: #f16055;
+  border-color: #f16055;
+}
+
+/* Gray */
+.default-outline {
+  border-color: #c2c2c2;
+  color: #242424;
+}
+
+.default-outline:hover {
+  background: #c2c2c2;
+  transition: all 0.2s ease-out;
+}
+
+.default-fill {
+  border-color: #c2c2c2;
+  background-color: #c2c2c2;
+  color: #242424;
+}
+
+.default-fill:hover {
+  background: #d1d1d1;
+  border-color: #d1d1d1;
+}
