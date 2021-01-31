@@ -8,7 +8,9 @@ function LandingSection() {
   return (
     <div className="landing-container">
       <h1>
-        Be yourself<br></br>Other roles are already occupied
+        Feel the soul of the
+        <br />
+        native land
       </h1>
       <div className="landing-btns">
         <Link to="/login" className="btn-mobile">

@@ -5,6 +5,7 @@ import * as FiIcons from "react-icons/fi";
 import Button from "./../buttons/white-button";
 import MaterialButton from "./../buttons/material-button";
 import Spinner from "./../spinner";
+import ShoppingCartEmpty from "./../shopping-cart-empty";
 import emailjs from "emailjs-com";
 import { Link } from "react-router-dom";
 
@@ -74,12 +75,7 @@ const ShoppingCartTable = ({
         <Spinner />
       </div>
     );
-  if (total === 0 && !email)
-    return (
-      <div className="shopping-cart-empty">
-        <h2>YOUR CART IS EMTY</h2>
-      </div>
-    );
+  if (total === 0 && !email) return <ShoppingCartEmpty />;
   if (total === 0 && email)
     return (
       <div className="shopping-cart-empty">
@@ -166,18 +162,18 @@ const ShoppingCartTable = ({
           <input type="text" onChange={(e) => onPhone(e)} />
         </form>
       </div>
-      <div className="total-price-container">
-        <div className="spacer"></div>
-        <Button
-          onClick={() =>
-            sendEmail(items, onClear, onSending, first, last, phone)
-          }
-          className="btns"
-          buttonStyle="btn--outline-variant-item"
-          buttonSize="btn--medium-variant-item"
-        >
-          Confirm Order
-        </Button>
+      <div className="confirm-order-container">
+        {/*<div className="spacer"></div>*/}
+        <div className="confirm-order-btn">
+          <MaterialButton
+            onClick={() =>
+              sendEmail(items, onClear, onSending, first, last, phone)
+            }
+            myStyle="success-fill large"
+          >
+            Confirm Order
+          </MaterialButton>
+        </div>
       </div>
     </div>
   );

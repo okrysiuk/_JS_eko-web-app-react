@@ -6,7 +6,7 @@ const CardItem = ({ card, onAddedToCart }) => {
   return (
     <>
       <div className="img-container">
-        <img src={imageUrl} alt="Card item" />
+        <img src={imageUrl} alt="card item" />
       </div>
       <div className="card-inner-container">
         <h4>{title}</h4>

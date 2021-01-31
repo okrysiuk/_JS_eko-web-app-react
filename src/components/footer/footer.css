@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 12vh;
+  background-color: #242424;
+}
+
+.footer p {
+  color: #fff;
+}
+
+.footer-icons-container {
+  font-size: 2.5rem;
+  display: flex;
+}
+.footer-icons-container a {
+  color: #fff;
+}
+
+.footer-spacer {
+  flex-grow: 1;
+}

@@ -1,0 +1,20 @@
+.shopping-cart-empty {
+  display: flex;
+  height: 12rem;
+  flex-direction: column;
+  justify-content: center;
+  color: #242424;
+  /*text-transform: uppercase;*/
+  padding-top: 2rem;
+  text-align: center;
+}
+.shopping-cart {
+  padding-top: 2rem;
+}
+.empty-cart-img-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+.empty-cart-img-wrapper img {
+  height: 100%;
+}
