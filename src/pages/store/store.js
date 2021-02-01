@@ -1,10 +1,20 @@
 import React from "react";
+import CardList from "./../../components/card-list";
+import Cart from "./../../pages/cart";
+import LandingSection from "./../../components/landing-section";
 
 const Store = () => {
   return (
-    <div style={{ marginTop: "56px" }}>
-      <h1>Store</h1>
-    </div>
+    <>
+      <LandingSection
+        title="Online store"
+        titleColor="white"
+        imgUrl="./img/online-store-grape.jpg"
+        isButtons={false}
+      />
+      <CardList />
+      <Cart />
+    </>
   );
 };
 

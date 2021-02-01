@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footer">
-      <p>Join us</p>
+      <p>Follow us</p>
       <div className="footer-icons-container">
         <div className="footer-spacer"></div>
         <Link to="/social">
