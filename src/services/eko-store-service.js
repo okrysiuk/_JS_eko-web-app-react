@@ -67,7 +67,7 @@ export default class EkoStoreService {
     {
       id: 9,
       title: "Puree",
-      brand: "ECO Ltd.",
+      brand: "ECO LLC",
       capacity: "1000 Kilos",
       price: 1999,
       imageUrl: "./images/puree-barrels-slim.jpg",
@@ -75,7 +75,7 @@ export default class EkoStoreService {
     {
       id: 10,
       title: "Concen-trate",
-      brand: "ECO Ltd.",
+      brand: "ECO LLC",
       capacity: "1000 Kilos",
       price: 9999,
       imageUrl: "./images/concentrate-tank-slim.jpg",

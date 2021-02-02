@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Social = () => {
   const SocialWrapper = styled.div`
-    height: 80vh;
+    height: 100%;
     text-align: center;
     padding: 0 2rem;
     display: flex;
