@@ -8,7 +8,7 @@ const Home = () => {
       <LandingSection
         title="Feel the soul of the native land"
         titleColor="white"
-        imgUrl="./img/green-apple-landing.jpg"
+        imgUrl="./images/green-apple-landing.jpg"
         isButtons={true}
       />
     </>

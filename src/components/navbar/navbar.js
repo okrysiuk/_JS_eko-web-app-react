@@ -59,8 +59,9 @@ const NavBar = ({ sidebarToggle, cartItemsNumber }) => {
           <Link to="/cart">
             <FaIcons.FaShoppingCart />
             {cartItemsNumber === 0 ? null : (
-              <span className="cart-number">{cartItemsNumber}</span>
+              <strong className="cart-number">{cartItemsNumber}</strong>
             )}
+            {/*<span>Cart</span>*/}
           </Link>
         </div>
       </nav>

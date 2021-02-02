@@ -10,6 +10,7 @@
 .card-item {
   position: relative;
   margin: 15px;
+  padding: 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,14 +23,29 @@
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.card-inner-container {
+.card-text-container {
+  font-size: 0.8rem;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   align-items: center;
   padding: 10px 10px;
 }
 
-.card-inner-container p {
+.card-buttons-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-buttons-container strong {
+  margin-left: 1rem;
+  align-self: center;
+}
+
+.card-text-container p {
   margin-bottom: 10px;
 }
 .img-container {
@@ -45,8 +61,8 @@
   font-size: 2rem;
   color: green;
   position: absolute;
-  top: 5%;
-  left: 85%;
+  top: 2%;
+  left: 74%;
 }
 
 h4 {

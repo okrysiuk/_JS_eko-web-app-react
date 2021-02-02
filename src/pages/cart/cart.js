@@ -1,12 +1,17 @@
 import React from "react";
 import ShoppingCartTable from "../../components/shopping-cart-table";
+import LandingSection from "./../../components/landing-section";
 
 const Cart = () => {
   return (
     <>
-      <div style={{ marginTop: "56px" }}>
-        <ShoppingCartTable />
-      </div>
+      <LandingSection
+        title="Shopping cart"
+        titleColor="white"
+        imgUrl="./images/shopping-cart.jpg"
+        isButtons={false}
+      />
+      <ShoppingCartTable />
     </>
   );
 };

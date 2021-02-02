@@ -1,10 +1,17 @@
 import React from "react";
+import LandingSection from "./../../components/landing-section";
 
 const Vacancies = () => {
   return (
-    <div style={{ marginTop: "56px" }}>
-      <h1>Vacancies</h1>
-    </div>
+    <>
+      <LandingSection
+        title="Vacancies"
+        titleColor="white"
+        imgUrl="./images/vacancies.jpg"
+        isButtons={false}
+      />
+      <div className="vacancies-container"></div>
+    </>
   );
 };
 

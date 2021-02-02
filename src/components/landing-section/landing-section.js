@@ -6,7 +6,8 @@ import styled from "styled-components";
 
 const LandingWrapper = styled.div`
   background: url(${(props) => props.imgUrl}) center center/cover no-repeat;
-  height: 50vh;
+  margin-top: 56px;
+  height: 40vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -28,7 +29,7 @@ const LandingTitle = styled.h1`
   }
   @media screen and (max-width: 768px) {
     font-size: 3rem;
-    margin-top: -1rem;
+    margin-top: -0.8rem;
   } ;
 `;
 
