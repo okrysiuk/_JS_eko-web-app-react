@@ -1,11 +1,11 @@
 .shopping-cart-empty {
   display: flex;
-  height: 12rem;
+  height: 10rem;
   flex-direction: column;
   justify-content: center;
   color: #242424;
   /*text-transform: uppercase;*/
-  padding-top: 2rem;
+  padding-top: 10px;
   text-align: center;
 }
 .shopping-cart {

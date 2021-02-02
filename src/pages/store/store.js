@@ -1,10 +1,35 @@
 import React from "react";
+import CardList from "./../../components/card-list";
+//import Cart from "./../../pages/cart";
+import LandingSection from "./../../components/landing-section";
+import MaterialButton from "./../../components/buttons/material-button";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const GotoCart = styled.div`
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: center;
+`;
 
 const Store = () => {
   return (
-    <div style={{ marginTop: "56px" }}>
-      <h1>Store</h1>
-    </div>
+    <>
+      <LandingSection
+        title="Online store"
+        titleColor="white"
+        imgUrl="./images/online-store-grape.jpg"
+        isButtons={false}
+      />
+      <CardList />
+      <GotoCart className="goto-cart-button-container">
+        <Link to="/cart">
+          <MaterialButton myStyle="success-outline medium">
+            Shopping cart &#8594;
+          </MaterialButton>
+        </Link>
+      </GotoCart>
+    </>
   );
 };
 

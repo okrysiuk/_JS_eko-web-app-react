@@ -104,28 +104,26 @@ const ShoppingCartTable = ({
         <td>${total}</td>
         <td id="buttons">
           <div className="buttons-container">
-            &#8195;
             <MaterialButton
               onClick={() => onDelete(id)}
               myStyle="danger-outline medium"
             >
               <FaIcons.FaRegTrashAlt />
             </MaterialButton>
-            &#8195;
+            <div className="line" />
             <MaterialButton
               onClick={() => onDecrease(id)}
               myStyle="warning-outline medium"
             >
               <FiIcons.FiMinusCircle />
             </MaterialButton>
-            &#8195;
+            <div className="line" />
             <MaterialButton
               onClick={() => onIncrease(id)}
               myStyle="success-outline medium"
             >
               <FiIcons.FiPlusCircle />
             </MaterialButton>
-            &#8195;
           </div>
         </td>
       </tr>

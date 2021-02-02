@@ -6,7 +6,7 @@ export default class EkoStoreService {
       brand: "Juices of Ukraine",
       capacity: "1L",
       price: 17,
-      imageUrl: "./img/grape-apple-small.png",
+      imageUrl: "./images/grape-apple-small.png",
     },
     {
       id: 2,
@@ -14,7 +14,7 @@ export default class EkoStoreService {
       brand: "Ranok",
       capacity: "1L",
       price: 15,
-      imageUrl: "./img/tomat-small.png",
+      imageUrl: "./images/tomat-small.png",
     },
     {
       id: 3,
@@ -22,7 +22,7 @@ export default class EkoStoreService {
       brand: "Fresh Pressed",
       capacity: "1L",
       price: 25,
-      imageUrl: "./img/straight-apple.jpg",
+      imageUrl: "./images/straight-apple.jpg",
     },
     {
       id: 4,
@@ -30,7 +30,7 @@ export default class EkoStoreService {
       brand: "Juices of Ukraine",
       capacity: "1L",
       price: 18,
-      imageUrl: "./img/apricot-ukr-juice.jpg",
+      imageUrl: "./images/apricot-ukr-juice.jpg",
     },
     {
       id: 5,
@@ -38,7 +38,7 @@ export default class EkoStoreService {
       brand: "Juices of Ukraine",
       capacity: "1L",
       price: 25,
-      imageUrl: "./img/grape-apple-small.png",
+      imageUrl: "./images/grape-apple-small.png",
     },
     {
       id: 6,
@@ -46,7 +46,7 @@ export default class EkoStoreService {
       brand: "Kviten",
       capacity: "1L",
       price: 12,
-      imageUrl: "./img/kviten-grape-apple.jpg",
+      imageUrl: "./images/kviten-grape-apple.jpg",
     },
     {
       id: 7,
@@ -54,7 +54,7 @@ export default class EkoStoreService {
       brand: "Fresh Pressed",
       capacity: "1L",
       price: 18,
-      imageUrl: "./img/straight-carrot.jpg",
+      imageUrl: "./images/straight-carrot.jpg",
     },
     {
       id: 8,
@@ -62,23 +62,23 @@ export default class EkoStoreService {
       brand: "Kviten",
       capacity: "1L",
       price: 11,
-      imageUrl: "./img/kviten-peach.jpg",
+      imageUrl: "./images/kviten-peach.jpg",
     },
     {
       id: 9,
-      title: "Apple Puree",
-      brand: "ECOSPHERE Ltd.",
+      title: "Puree",
+      brand: "ECO Ltd.",
       capacity: "1000 Kilos",
       price: 1999,
-      imageUrl: "./img/puree-barrels.png",
+      imageUrl: "./images/puree-barrels-slim.jpg",
     },
     {
       id: 10,
-      title: "Apple Concentrate",
-      brand: "ECOSPHERE Ltd.",
+      title: "Concen-trate",
+      brand: "ECO Ltd.",
       capacity: "1000 Kilos",
       price: 9999,
-      imageUrl: "./img/concentrate-tank.jpg",
+      imageUrl: "./images/concentrate-tank-slim.jpg",
     },
   ];
 
