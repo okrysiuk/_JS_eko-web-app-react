@@ -18,12 +18,29 @@ const Contacts = () => {
         />
         <Marker position={position}>
           <Popup>
-            ECOSPHERE Ltd. <br /> Juice production company.
+            ECOSPHERE LLC <br /> Juice production company.
           </Popup>
         </Marker>
       </MapContainer>
       <div className="address-wrapper">
-        <h4>Kalinovka, Ivana Mazepy 45 st.</h4>
+        <div className="address-kalynivka">
+          <h4>ECOSPHERE LLC</h4>
+          <p>Mazepy Str. 45 Kalynivka,</p>
+          <p>Vinnytsia region, Ukraine,</p>
+          <p>UA-22400</p>
+        </div>
+        <div className="bank-details">
+          <h4>Bank details</h4>
+          <p>Beneficiary bank: JSB</p>
+          <p>UKRGASBANK, Ukraine</p>
+          <p>SWIFT code: UGASUAUK</p>
+        </div>
+        <div className="phone-numbers">
+          <h4>Phone numbers</h4>
+          <p>+38(04333)2-21-32</p>
+          <p>+38(04333)2-12-98</p>
+          <p>+38(04333)4-05-50</p>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,44 @@
+.vacancies-container {
+  padding: 15px;
+  /*background-color: thistle;*/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.vacancy-item {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.vacancy-photo {
+  height: 200px;
+}
+.vacancy-photo img {
+  height: 100%;
+}
+.vacancy-description {
+  align-self: flex-start;
+  padding: 10px;
+}
+
+.vacancy-description h2 {
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .vacancy-item {
+    flex-direction: column;
+  }
+  .vacancy-description p {
+    text-align: justify;
+  }
+  .vacancy-description h2 {
+    text-align: center;
+  }
+}
+
+
