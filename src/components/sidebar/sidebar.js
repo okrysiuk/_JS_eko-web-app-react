@@ -23,8 +23,8 @@ const Sidebar = (props) => {
           </Link>
         </li>
         <li>
-          <Link to="/production" onClick={props.sidebarToggle}>
-            Production
+          <Link to="/products" onClick={props.sidebarToggle}>
+            Product range
           </Link>
         </li>
         <li>

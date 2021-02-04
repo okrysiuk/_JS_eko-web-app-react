@@ -30,9 +30,9 @@ const NavBar = ({ sidebarToggle, cartItemsNumber }) => {
               </Link>
             </li>
             <li>
-              <Link to="/production">
+              <Link to="/products">
                 {/*<GiIcons.GiFruitTree className="navbar-icon" />*/}
-                Production
+                Products
               </Link>
             </li>
             <li>
