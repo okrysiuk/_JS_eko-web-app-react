@@ -10,11 +10,14 @@ const CapacitySection = () => {
           <div className="table-card-item">
             <h3>0.2L(0.228 kg)</h3>
             <table className="zero">
+              <thead>
               <tr>
                 <th>Packaging</th>
                 <th>Quantity</th>
                 <th>Weight</th>
               </tr>
+              </thead>
+              <tbody>
               <tr>
                 <td>In packaging</td>
                 <td>26 pieces</td>
@@ -55,17 +58,21 @@ const CapacitySection = () => {
                 </td>
                 <td>20100 kg</td>
               </tr>
+              </tbody>
             </table>
           </div>
           <div className="table-spacer" />
           <div className="table-card-item">
             <h3>1L(1.143 kg)</h3>
             <table className="zero">
+              <thead>
               <tr>
                 <th>Packaging</th>
                 <th>Quantity</th>
                 <th>Weight</th>
               </tr>
+              </thead>
+              <tbody>
               <tr>
                 <td>In packaging</td>
                 <td>12 pieces</td>
@@ -106,6 +113,7 @@ const CapacitySection = () => {
                 </td>
                 <td>21800 kg</td>
               </tr>
+              </tbody>
             </table>
           </div>
         </div>
@@ -114,11 +122,14 @@ const CapacitySection = () => {
           <div className="table-card-item">
             <h3>1.9L(2 kg)</h3>
             <table className="zero">
+              <thead>
               <tr>
                 <th>Packaging</th>
                 <th>Quantity</th>
                 <th>Weight</th>
               </tr>
+              </thead>
+              <tbody>
               <tr>
                 <td>In packaging</td>
                 <td>6 pieces</td>
@@ -159,17 +170,21 @@ const CapacitySection = () => {
                 </td>
                 <td>19000 kg</td>
               </tr>
+              </tbody>
             </table>
           </div>
           <div className="brand-spacer" />
           <div className="table-card-item">
             <h3>3L(4 kg)</h3>
             <table className="zero">
+              <thead>
               <tr>
                 <th>Packaging</th>
                 <th>Quantity</th>
                 <th>Weight</th>
               </tr>
+              </thead>
+              <tbody>
               <tr>
                 <td>In packaging</td>
                 <td>2 pieces</td>
@@ -192,6 +207,7 @@ const CapacitySection = () => {
                 </td>
                 <td>20000 kg</td>
               </tr>
+              </tbody>
             </table>
           </div>
         </div>

@@ -7,14 +7,14 @@ export const Soky = () => {
         <g
           id="Page-1"
           stroke="none"
-          stroke-width="1"
+          strokeWidth="1"
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <g
             id="Ecosphere_Juice_FullPage"
             transform="translate(-212.000000, -1577.000000)"
-            fill-rule="nonzero"
+            fillRule="nonzero"
             fill="#345A31"
           >
             <g id="-" transform="translate(170.000000, 880.000000)">
@@ -85,14 +85,14 @@ export const Ranok = () => {
         <g
           id="Page-1"
           stroke="none"
-          stroke-width="1"
+          strokeWidth="1"
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <g
             id="Ecosphere_Juice_FullPage"
             transform="translate(-410.000000, -1570.000000)"
-            fill-rule="nonzero"
+            fillRule="nonzero"
             fill="#345A31"
           >
             <g id="-" transform="translate(170.000000, 880.000000)">
@@ -183,14 +183,14 @@ export const Fresh = () => {
         <g
           id="Page-1"
           stroke="none"
-          stroke-width="1"
+          strokeWidth="1"
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <g
             id="Ecosphere_Juice_FullPage"
             transform="translate(-580.000000, -1578.000000)"
-            fill-rule="nonzero"
+            fillRule="nonzero"
             fill="#345A31"
           >
             <g id="-" transform="translate(170.000000, 880.000000)">
@@ -253,14 +253,14 @@ export const Ekosfera = () => {
         <g
           id="Page-1"
           stroke="none"
-          stroke-width="1"
+          strokeWidth="1"
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <g
             id="Ecosphere_Juice_FullPage"
             transform="translate(-712.000000, -1579.000000)"
-            fill-rule="nonzero"
+            fillRule="nonzero"
             fill="#345A31"
           >
             <g id="-" transform="translate(170.000000, 880.000000)">
@@ -319,9 +319,9 @@ export const Kviten = () => {
         <g
           id="Page-1"
           stroke="none"
-          stroke-width="1"
+          strokeWidth="1"
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <g
             id="Ecosphere_Juice_FullPage"

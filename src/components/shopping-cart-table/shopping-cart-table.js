@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import * as FaIcons from "react-icons/fa";
 import * as FiIcons from "react-icons/fi";
-import Button from "./../buttons/white-button";
 import MaterialButton from "./../buttons/material-button";
 import Spinner from "./../spinner";
 import ShoppingCartEmpty from "./../shopping-cart-empty";
@@ -22,13 +21,23 @@ import {
 
 import "./shopping-cart-table.css";
 
-const sendEmail = (items, onClear, onSending, first, last, phone) => {
+const sendEmail = (items, onClear, onSending, first, last, phone, total) => {
   onSending();
   const templateParams = {
-    items: JSON.stringify(items),
+    items: JSON.stringify(items)
+      .replace(/"id"/g, "Код")
+      /* .replace(/"id":[+-]?(?<!\.)\b[0-9]+\b(?!\.[0-9]),/gi, "") */
+      .replace(/"title"/g, " Товар")
+      .replace(/"brand"/g, " Бренд")
+      .replace(/"count"/g, " Кількість")
+      .replace(/"total"/g, " Ціна")
+      .replace(/\[{/, "")
+      .replace(/\}]/, "")
+      .replace(/},{/g, "_____"),
     first,
     last,
     phone,
+    total,
   };
   emailjs
     .send(
@@ -81,15 +90,11 @@ const ShoppingCartTable = ({
       <div className="shopping-cart-empty">
         <h2>YOUR ORDER HAS BEEN SEND ;)</h2>
         <p>We will call you back soon...</p>
-        <Link to="/products">
-          <Button
-            className="btns"
-            buttonStyle="btn--outline-variant-item"
-            buttonSize="btn--medium-variant-item"
-          >
+        <Link to="/store">
+          <MaterialButton myStyle="success-outline large">
             LET'S GO SHOPPING AGAIN !
             <FaIcons.FaCartArrowDown />
-          </Button>
+          </MaterialButton>
         </Link>
       </div>
     );
@@ -167,7 +172,7 @@ const ShoppingCartTable = ({
         <div className="confirm-order-btn">
           <MaterialButton
             onClick={() =>
-              sendEmail(items, onClear, onSending, first, last, phone)
+              sendEmail(items, onClear, onSending, first, last, phone, total)
             }
             myStyle="success-fill large"
           >

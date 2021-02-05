@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Social = () => {
-  const SocialWrapper = styled.div`
+const SocialWrapper = styled.div`
     height: 100%;
     text-align: center;
     padding: 0 2rem;
@@ -15,6 +14,8 @@ const Social = () => {
     color: red;
   `;
 
+const Social = () => {
+  
   return (
     <SocialWrapper>
       <h1>Link to social networks will be alive after creating accounts...</h1>
