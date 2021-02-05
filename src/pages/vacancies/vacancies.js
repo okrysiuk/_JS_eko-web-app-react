@@ -22,7 +22,7 @@ const Vacancies = () => {
   return (
     <>
       <LandingSection
-        title="Vacancies"
+        title="Join our team"
         titleColor="white"
         imgUrl="./images/vacancies.jpg"
         isButtons={false}

@@ -5,7 +5,7 @@ import "./brand-section.css";
 const BrandSection = () => {
   return (
     <>
-      <h2 className="brand-title">Discover healty life with our juices</h2>
+      <h1 className="brand-title">Discover healty life with our juices</h1>
       <div className="brand-section">
         <div className="brand-section-row">
           <div className="brand-card-item">
@@ -88,6 +88,7 @@ const BrandSection = () => {
           </div>
         </div>
       </div>
+      {/*------------------------------------------------------------- */}
     </>
   );
 };

@@ -17,8 +17,8 @@ const Store = () => {
     <>
       <LandingSection
         title="Online store"
-        titleColor="white"
-        imgUrl="./images/online-store-grape.jpg"
+        titleColor="#fff"
+        imgUrl="./images/store-page.jpg"
         isButtons={false}
       />
       <CardList />

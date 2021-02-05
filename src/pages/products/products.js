@@ -1,12 +1,21 @@
 import React from "react";
 import BrandSection from "./../../components/brand-section";
+import CapacitySection from "./../../components/capacity-section";
+import LandingSection from "./../../components/landing-section";
 import "./products.css";
 
 const Products = () => {
   return (
-    <div className="products-container">
+    <>
+      <LandingSection
+        title="Product range"
+        titleColor="white"
+        imgUrl="./images/products-page.jpg"
+        isButtons={false}
+      />
       <BrandSection />
-    </div>
+      <CapacitySection />
+    </>
   );
 };
 

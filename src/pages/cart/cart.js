@@ -8,7 +8,7 @@ const Cart = () => {
       <LandingSection
         title="Shopping cart"
         titleColor="white"
-        imgUrl="./images/shopping-cart.jpg"
+        imgUrl="./images/cart-page.jpg"
         isButtons={false}
       />
       <ShoppingCartTable />
