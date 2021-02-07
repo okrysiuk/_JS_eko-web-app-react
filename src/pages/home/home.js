@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import LandingSection from "./../../components/landing-section";
 import WhySection from "./../../components/why-section";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <LandingSection
