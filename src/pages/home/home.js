@@ -1,5 +1,6 @@
 import React from "react";
 import LandingSection from "./../../components/landing-section";
+import WhySection from "./../../components/why-section";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
         imgUrl="./images/green-apple-landing.jpg"
         isButtons={true}
       />
+      <WhySection />
     </>
   );
 };
