@@ -22,7 +22,7 @@ const Vacancies = () => {
   return (
     <>
       <LandingSection
-        title="Vacancies"
+        title="Join our team"
         titleColor="white"
         imgUrl="./images/vacancies.jpg"
         isButtons={false}
@@ -31,6 +31,7 @@ const Vacancies = () => {
         {vacanciesList.map((vacancy) => {
           return (
             <VacancyItem
+              key={vacancy.id}
               imgUrl={vacancy.imgUrl}
               title={vacancy.title}
               desc={vacancy.description}

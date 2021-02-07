@@ -11,12 +11,12 @@ import Footer from "./../footer";
 
 //* Pages
 import Home from "./../../pages/home";
-import Production from "./../../pages/production";
 import Store from "../../pages/store";
 import Vacancies from "./../../pages/vacancies";
 import Contacts from "./../../pages/contacts";
 import Cart from "./../../pages/cart";
 import Social from "./../../pages/social";
+import Products from "../../pages/products";
 
 const App = () => {
   const [sidebarStatus, setSidebarStatus] = useState(false);
@@ -35,27 +35,13 @@ const App = () => {
       </div>
       <div className="app-content">
         <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/production" exact>
-            <Production />
-          </Route>
-          <Route path="/store" exact>
-            <Store />
-          </Route>
-          <Route path="/vacancies" exact>
-            <Vacancies />
-          </Route>
-          <Route path="/contacts" exact>
-            <Contacts />
-          </Route>
-          <Route path="/cart" exact>
-            <Cart />
-          </Route>
-          <Route path="/social" exact>
-            <Social />
-          </Route>
+          <Route path="/" exact component={Home} />
+          <Route path="/products" component={Products} />
+          <Route path="/store" component={Store} />
+          <Route path="/vacancies" component={Vacancies} />
+          <Route path="/contacts" component={Contacts} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/social" component={Social} />
         </Switch>
       </div>
       <div className="app-footer">

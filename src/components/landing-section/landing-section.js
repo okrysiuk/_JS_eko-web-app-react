@@ -40,11 +40,11 @@ const ButtonsWrapper = styled.div`
 const LandingSectionButtons = () => {
   return (
     <ButtonsWrapper>
-      <Link to="/login" className="btn-mobile">
-        <MaterialButton myStyle="white large">LOG IN</MaterialButton>
+      <Link to="/products">
+        <MaterialButton myStyle="transparent-white medium">PRODUCTS</MaterialButton>
       </Link>
-      <Link to="/store" className="btn-mobile">
-        <MaterialButton myStyle="transparent-white large">
+      <Link to="/store">
+        <MaterialButton myStyle="white medium">
           ONLINE STORE
         </MaterialButton>
       </Link>

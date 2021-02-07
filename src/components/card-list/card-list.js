@@ -18,7 +18,6 @@ import ErrorNotification from "./../error-notification";
 const CardList = ({ cards, onAddedToCart, cartItems }) => {
   const avoska = [];
   cartItems.map((item) => avoska.push(item.id));
-  console.log(avoska);
   return (
     <div className="cards-container">
       {cards.map((card) => {
@@ -75,9 +74,3 @@ export default compose(
   withEkoStoreService(),
   connect(mapStateToProps, mapDispatchToProps)
 )(CardListContainer);
-
-/*
-{cartItems.indexOf(card) !== -1 ? (
-                <FaIcons.FaCheckCircle />
-              ) : null}
-*/
